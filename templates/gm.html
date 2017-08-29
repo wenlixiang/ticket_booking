@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+<p>以下是购买信息</p>
+
+<table border="1">
+
+<tr>
+    <td>ID</td>
+    <td>用户名</td>
+    <td>身份证号</td>
+    <td>票务ID</td>
+</tr>
+
+{% for user in users %}
+<tr>
+  <td>{{ user[0] }}</td>
+  <td>{{ user[1] }}</td>
+  <td>{{ user[2] }}</td>
+  <td>{{ user[3] }}</td>
+</tr>
+
+{% endfor %}
+
+
+
+</table>
+
+</body>
+</html>

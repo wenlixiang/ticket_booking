@@ -1,0 +1,49 @@
+<html>
+
+<body>
+
+<form action="/gm" method="get">
+  姓名: <input type="text" name="name" /><br />
+  身份证: <input type="text" name="id_card" /><br />
+  票务ID: <input type="text" name="id_ticket" /><br />
+  <button type="submit" value="Submit">购买</button>
+  <button type="reset" value="Reset">重置</button>
+</form>
+
+<p>以下是票务信息</p>
+
+<table border="1">
+
+<tr>
+    <td>ID</td>
+    <td>航班号</td>
+    <td>起点</td>
+    <td>终点</td>
+    <td>起飞时间</td>
+    <td>总座位数</td>
+    <td>座位号</td>
+    <td>是否已经卖出</td>
+    <td>操作</td>
+</tr>
+
+{% for ticket in tickets %}
+<tr>
+  <td>{{ ticket[0] }}</td>
+  <td>{{ ticket[1] }}</td>
+  <td>{{ ticket[2] }}</td>
+  <td>{{ ticket[3] }}</td>
+  <td>{{ ticket[4] }}</td>
+  <td>{{ ticket[5] }}</td>
+  <td>{{ ticket[6] }}</td>
+  <td>{{ ticket[7] }}</td>
+  <td><button type="button">购买</button></td>
+</tr>
+
+{% endfor %}
+
+
+
+</table>
+
+</body>
+</html>
